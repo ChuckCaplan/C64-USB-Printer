@@ -11,9 +11,8 @@ Working:
  * GeoPaint
  * Presumably other software that prints in graphics mode to an MPS-803 printer
 
-Not Working / Issues:
+Not Working:
  * Text-based printing like word processors
- * LOAD"*",8,1 sometimes needs to be retried once (DEVICE NOT FOUND)
 
 # Project Folder Structure
  * /arduino - Arduino sketch to be uploaded to an Arduino UNO R4 Wifi to handle IEC protocol communication and send to a Python script running on a Raspberry PI (or other system) for printing.
