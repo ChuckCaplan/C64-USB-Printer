@@ -1,4 +1,4 @@
-# IEC-printer - Script Installation
+# C64-USB-Printer - Script Installation
 
 This Python script accepts raw MPS-803 printer data from an Arduino, converts to PDF, and optionally prints to the default installed printer using the lp command. When all connected, MPS-803 print jobs from the C64 will automatically print to a modern (USB or wifi) printer.
 
