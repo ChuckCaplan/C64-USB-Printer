@@ -2,7 +2,7 @@
 
 **Print from a real Commodore 64 to a modern USB or Wi-Fi printer — no vintage dot-matrix required.**
 
-Your C64 still thinks it's talking to a 1980s MPS-803 printer over the IEC bus. This project quietly catches that output and prints it to a modern printer. Hit Print in The Print Shop, and a page comes out of your USB or Wi-Fi printer later. It's 100% automated end to end — nothing to click, no files to move.
+Your C64 still thinks it's talking to a 1980s MPS-803 printer over the IEC bus. This project quietly catches that output and prints it to a modern printer. Hit Print in The Print Shop, and a page comes out of your USB or Wi-Fi printer a moment later. It's 100% automated end to end — nothing to click, no files to move.
 
 **How it works:**
 
