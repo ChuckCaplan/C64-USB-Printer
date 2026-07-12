@@ -1,8 +1,21 @@
 # C64-USB-Printer
 
-Originally forked from https://github.com/smdprutser/IEC-printer, but now using https://github.com/dhansel/IECDevice for IEC protocol communication.
+**Print from a real Commodore 64 to a modern USB or Wi-Fi printer — no vintage dot-matrix required.**
 
-This project allows a real Commodore 64 to print from the IEC port to a modern (USB or wifi) printer. When the C64 prints, data goes from the IEC port to an Arduino UNO R4 Wifi that handles IEC protocol communication. The Arduino then passes the raw print data to a Python script running on a Raspberry PI (or Mac, PC, etc.). The Python script converts the raw printer data to PDF, and prints to a printer via the lp command. This is 100% automated - just print from the C64 right to a USB / wifi printer.
+Your C64 still thinks it's talking to a 1980s MPS-803 printer over the IEC bus. This project quietly catches that output and turns it into a PDF on the printer sitting in your house today. Hit print in The Print Shop, and a page comes out of your Brother or HP a moment later. It's 100% automated end to end — nothing to click, no files to move.
+
+**How it works:**
+
+```
+  Commodore 64  ──IEC bus──▶  Arduino UNO R4 WiFi  ──USB/WiFi──▶  Raspberry Pi / Mac / PC  ──lp──▶  USB or WiFi Printer
+   (hits print)               (speaks IEC protocol)                (Python: raw data ──▶ PDF)          (prints the page)
+```
+
+1. The **C64** prints as it always has, sending data out the IEC port.
+2. An **Arduino UNO R4 WiFi** handles the IEC protocol handshake and forwards the raw print data.
+3. A **Python script** on a Raspberry Pi (or Mac, PC, etc.) converts that raw data into a PDF and sends it to any printer via the `lp` command.
+
+Originally forked from https://github.com/smdprutser/IEC-printer, now using [dhansel/IECDevice](https://github.com/dhansel/IECDevice) for IEC protocol communication.
 
 Working:
  * The Print Shop: Signs, greeting cards, letterheads, and multi-page banners
