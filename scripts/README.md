@@ -62,16 +62,16 @@ d. Print a test page if needed (upload with sftp):
 - lp test.pdf
 
 ## 4. Install the Python Script
-a. Clone the IEC-Printer repo.
+a. Clone the C64-USB-Printer repo.
 - cd ~    
-- git clone https://github.com/ChuckCaplan/IEC-printer.git
+- git clone https://github.com/ChuckCaplan/C64-USB-Printer.git
 
 ## 5. Install the Service
 
 a. Install on startup
 - Edit iec-printer.service and change the 3 instances of your_username to your username (replace chuck with your username):\
-sed -i 's/your_username/chuck/g' ~/IEC-printer/scripts/iec-printer.service
-- sudo cp ~/IEC-printer/scripts/iec-printer.service /etc/systemd/system/
+sed -i 's/your_username/chuck/g' ~/C64-USB-Printer/scripts/iec-printer.service
+- sudo cp ~/C64-USB-Printer/scripts/iec-printer.service /etc/systemd/system/
 - sudo systemctl daemon-reload
 - sudo systemctl enable iec-printer.service
 - sudo systemctl start iec-printer.service
@@ -92,19 +92,19 @@ To test the full workflow, print a sign from Print Shop on a real C64, check the
 
 a. Run the Python server and test if working. If you installed the service then this should already be running. Run the first command below to check. Use the -p command to automatically print the converted PDF to your default printer. Leave it out if you only want to save the image to disk.
 - sudo systemctl status iec-printer.service
-- cd ~/IEC-printer
+- cd ~/C64-USB-Printer
 - python3 scripts/python_server.py -p
 
 b. To test this script on its own, you can pass in a raw printer data file from Vice using nc (or netcat on some systems):
 
 - nc localhost 65432 < print.dump
-- Then look in ~/IEC-printer/output for the generated PDF
+- Then look in ~/C64-USB-Printer/output for the generated PDF
 
 c. If needed, install an X-Windows PDF viewer
 - sudo apt install -y mupdf
 - Then on Mac, run X Quartz:
 - ssh -X user@raspberrypi.local
-- mupdf ~/IEC-printer/output/mypdf.pdf
+- mupdf ~/C64-USB-Printer/output/mypdf.pdf
 
 # License
 

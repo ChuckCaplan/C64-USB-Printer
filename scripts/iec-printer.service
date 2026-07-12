@@ -12,8 +12,8 @@ Type=simple
 User=your_username
 
 # The command to start the server.
-WorkingDirectory=/home/your_username/IEC-printer
-ExecStart=python /home/your_username/IEC-printer/scripts/python_server.py -p
+WorkingDirectory=/home/your_username/C64-USB-Printer
+ExecStart=python /home/your_username/C64-USB-Printer/scripts/python_server.py -p
 
 Restart=on-failure
 
