@@ -1,4 +1,4 @@
-# IEC-printer
+# C64-USB-Printer
 
 Originally forked from https://github.com/smdprutser/IEC-printer, but now using https://github.com/dhansel/IECDevice for IEC protocol communication.
 
